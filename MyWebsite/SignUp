@@ -1,0 +1,93 @@
+/*class User
+{
+    // make those fields public for accessibility
+    public string Username;
+    public string Password;
+    public string NAME;
+    public string Age;
+    public srting Email;
+
+    public User(string Username, string Password, string NAME, string Age, string Email)
+    {
+        // assign each fields with arguments from constructor
+        this.Username = Username;
+        this.Password = Password;
+        this.NAME = NAME;
+        this.Age = Age;
+        this.email = Email;
+    }
+}
+
+class User
+{
+    // Dont forget to add // using System.Collections.Generic;
+    // on top of the file otherwise List<> would not be available
+    public static List<User> UserList = new List<User>();
+
+    // make those fields public for accessibility
+    public string Username;
+    public string Password;
+    public string NAME;
+    public string Age;
+    public string Email;
+
+    public User(string Username, string Password, string NAME, string Age, string Email)
+    {
+        // assign each fields with arguments from constructor
+        this.Username = Username;
+        this.Password = Password;
+        this.NAME = NAME;
+        this.Age = Age;
+        this.Email = Email;
+    }
+}
+*/
+
+class User
+{
+    // Dont forget to add // using System.Collections.Generic;
+    // on top of the file otherwise List<> would not be available
+    public static List<User> UserList = new List<User>();
+
+    // make those fields public for accessibility
+    public string Username;
+    public string Password;
+    public string NAME;
+    public string Age;
+    public string Email;
+
+    public User(string Username, string Password, string NAME, string Age, string Email)
+    {
+        // assign each fields with arguments from constructor
+        this.Username = Username;
+        this.Password = Password;
+        this.NAME = NAME;
+        this.Age = Age;
+        this.Email = Email;
+    }
+
+    public static void AddUserToList(User user)
+    {
+        UserList.Add(user);
+    }
+}
+
+private void RegisterBtn2_Click(object sender, EventArgs e)
+    {
+
+        // check for valid input first
+        if (string.IsNullOrWhiteSpace(NTB.Text) && string.IsNullOrWhiteSpace(ATB.Text) && string.IsNullOrWhiteSpace(RegUserNameTB.Text) && string.IsNullOrWhiteSpace(RegPasswordTB.Text))
+        {
+            MessageBox.Show("Please enter the following:" + "\n" + "Name" + "\n" + "Age" + "\n" + "\n" + "UserName" + "\n" + "Password");
+        }
+        else if (string.IsNullOrWhiteSpace(NTB.Text) && string.IsNullOrWhiteSpace(ATB.Text) && string.IsNullOrWhiteSpace(RegUserNameTB.Text) && string.IsNullOrWhiteSpace(RegPasswordTB.Text))
+        {
+            MessageBox.Show("Please enter the following:" + "\n" + "Name" + "\n" + "Age" + "\n" + "\n" + "UserName" + "\n" + "Password");
+        }
+        else
+        {
+            User user = new User(RegUserNameTB.Text, RegPasswordTB.Text, NTB.Text, ATB.Text);
+            User.AddUserToList(user);
+        }
+        Close();
+    }

@@ -1,0 +1,29 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+  <appSettings>
+    <add key="Admin" value="123abc"/>
+    <add key="Test" value="imboss"/>
+  </appSettings>
+</configuration>
+
+
+private void loginButton_Click(object sender, EventArgs e)
+{
+    string username, password;
+    username = textBox1.Text;
+    password = textBox2.Text;
+
+
+    if ("userProfileName".ToString() == username && "userPassword".ToString() == password)
+    {
+        //login
+    }
+    else
+    {
+        MessageBox.Show("You have entered a wrong user name or password!");
+    }
+}
